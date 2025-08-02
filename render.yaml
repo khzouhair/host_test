@@ -4,5 +4,5 @@ services:
     env: python
     buildCommand: |
       pip install -r requirements.txt
-      python -m spacy download en_core_web_sm
+      python download_model.py
     startCommand: gunicorn app:app
