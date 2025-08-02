@@ -4,4 +4,5 @@ python-dotenv==1.0.1
 requests==2.31.0
 google-generativeai==0.4.1
 spacy==3.7.2
+ro-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/ro_core_news_sm-3.7.0/ro_core_news_sm-3.7.0-py3-none-any.whl
 gunicorn==21.2.0
