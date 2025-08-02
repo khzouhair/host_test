@@ -22,7 +22,7 @@ nlp = None
 def get_nlp():
     global nlp
     if nlp is None:
-        nlp = spacy.load("en_core_web_sm")
+        nlp = spacy.load("ro_core_news_sm")
     return nlp
 # nlp = spacy.load("en_core_web_sm")
 CATEGORIES = get_categories()
