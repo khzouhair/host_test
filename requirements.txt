@@ -4,5 +4,4 @@ python-dotenv==1.0.1
 requests==2.31.0
 google-generativeai==0.4.1
 spacy==3.7.2
-en-core-web-sm==3.7.1
 gunicorn==21.2.0
