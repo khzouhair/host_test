@@ -2,6 +2,5 @@ services:
   - type: web
     name: rihla-flask
     env: python
-    pythonVersion: "3.10.13"
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app"
