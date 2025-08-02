@@ -18,13 +18,13 @@ load_dotenv()
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 CORS(app)
-nlp = None
-def get_nlp():
-    global nlp
-    if nlp is None:
-        nlp = spacy.load("en_core_web_sm")
-    return nlp
-#nlp = spacy.load("en_core_web_sm")
+# nlp = None
+# def get_nlp():
+#     global nlp
+#     if nlp is None:
+#         nlp = spacy.load("en_core_web_sm")
+#     return nlp
+nlp = spacy.load("en_core_web_sm")
 CATEGORIES = get_categories()
 
 @app.route('/static/<path:filename>')
@@ -84,8 +84,8 @@ def auth_register():
 
 #@app.route('/discover', methods=['POST'])
 def extract_entities(text):
-    doc = get_nlp()(text)
-    #doc = nlp(text)
+    #doc = get_nlp()(text)
+    doc = nlp(text)
     entities = set()
     for ent in doc.ents:
         if ent.label_ in ["ORG", "PERSON", "GPE", "LOC", "WORK_OF_ART", "EVENT"]:
