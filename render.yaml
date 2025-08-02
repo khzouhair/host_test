@@ -23,6 +23,7 @@ services:
     env: python
     buildCommand: |
       pip install -r requirements.txt
-      python -m spacy link ro_core_news_sm ro_core_news_sm --force
+      python -m spacy download en_core_web_sm
+      #python -m spacy link ro_core_news_sm ro_core_news_sm --force
     startCommand: gunicorn app:app
 
